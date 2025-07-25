@@ -20,19 +20,18 @@ public class WeakHashMapDemo {
         // Simulate a delay to give GC time to run
         simulateApplicationRunning();
 
-        // After GC, weakly-referenced keys with no strong references may be removed
+        // After GC, weakly referenced keys with no strong references may be removed
         System.out.println("Cache after running (some entries may be cleared): " + imageCache);
     }
 
     public static void loadCache(Map<String, Image> imageCache) {
-        // Use new String() to ensure keys are not interned (and are weakly referenced)
-        String k1 = new String("img1");
-        String k2 = new String("img2");
 
         // Put entries into the WeakHashMap
+        String k1 = new String("img1"); // not interned
+        String k2 = new String("img2"); // not interned
+
         imageCache.put(k1, new Image("Image 1"));
         imageCache.put(k2, new Image("Image 2"));
-
         // After this method ends, k1 and k2 go out of scope
         // and become eligible for garbage collection
     }

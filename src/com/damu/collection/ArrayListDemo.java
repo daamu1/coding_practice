@@ -3,16 +3,21 @@ package com.damu.collection;
 import java.util.*;
 
 class Student implements Comparable<Student> {
-    private String name;
-    private double gpa;
+    private final String name;
+    private final double gpa;
 
     public Student(String name, double gpa) {
         this.name = name;
         this.gpa = gpa;
     }
 
-    public String getName() { return name; }
-    public double getGpa() { return gpa; }
+    public String getName() {
+        return name;
+    }
+
+    public double getGpa() {
+        return gpa;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -63,6 +68,14 @@ public class ArrayListDemo {
         Collections.sort(students);
         System.out.println("\nSorted using Comparable (only GPA descending):");
         students.forEach(System.out::println);
+
+        List<Integer> integers = new ArrayList<>();
+        integers.add(1);
+        integers.add(11);
+        integers.add(1000);
+        integers.add(122);
+        integers.sort(Comparator.naturalOrder());
+        System.out.println(integers);
     }
 }
 /*

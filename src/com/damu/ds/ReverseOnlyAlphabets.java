@@ -1,3 +1,5 @@
+package com.damu.ds;
+
 import java.util.Scanner;
 
 public class ReverseOnlyAlphabets {

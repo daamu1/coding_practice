@@ -3,7 +3,7 @@ package com.damu.collection;
 import java.util.IdentityHashMap;
 import java.util.Map;
 
-public class IdentityHashMapDemo {
+public class  IdentityHashMapDemo {
     public static void main(String[] args) {
         // IdentityHashMap compares keys using '==' (reference equality) instead of .equals()
         Map<String, Integer> map = new IdentityHashMap<>();
@@ -12,7 +12,7 @@ public class IdentityHashMapDemo {
         String key2 = new String("Akshit");
 
         map.put(key1, 90); // inserted as separate key
-        map.put(key2, 92); // different reference → treated as new key
+        map.put(key2, 90); // different reference → treated as new key
 
         System.out.println(map); // shows both entries
     }
