@@ -9,6 +9,8 @@ import java.util.concurrent.Executors;
 
 public class ConcurrentSkipListMapDemo {
     public static void main(String[] args) {
+//        ConcurrentSkipListMap is a thread-safe, sorted map in Java that uses a Skip List to maintain keys in natural
+//        or custom order and supports concurrent read/write operations without blocking.
         // 🔥 ConcurrentSkipListMap = Thread-safe + Sorted (natural key order)
         // ✅ Backed by Skip List (multi-level linked list for fast search)
         // ✅ Reads are lock-free, writes are fine-grained locked

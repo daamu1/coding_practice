@@ -13,18 +13,20 @@ public class ImmutableMapDemo {
 
         // Creating an unmodifiable view of map1
         Map<String, Integer> map2 = Collections.unmodifiableMap(map1);
-        System.out.println(map2);
-//        map2.put("C", 3); // throws UnsupportedOperationException
+//        System.out.println(map2);
+        map2.put("C", 3); // throws UnsupportedOperationException
 
         // Creating an immutable map using Java 9+ Map.of() (fixed-size, no nulls)
         Map<String, Integer> map3 = Map.of("Shubham", 98, "Vivek", 89);
-        // map3.put("Akshit", 88); // throws UnsupportedOperationException
+//         map3.put("Akshit", 88); // throws UnsupportedOperationException
 
         // Creating another immutable map using Map.ofEntries()
         Map<String, Integer> map4 = Map.ofEntries(
                 Map.entry("Akshit", 99),
                 Map.entry("Vivek", 99)
         );
+        map4.put("C", 3); // throws UnsupportedOperationException
+
     }
 }
 
