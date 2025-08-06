@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="896c00de-8e72-4241-aa98-aedad9168605" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/damu/collection/QueueDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/damu/collection/QueueDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/damu/collection/PriorityQueueDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/damu/collection/PriorityQueueDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +46,7 @@
       <recent name="$PROJECT_DIR$/src/com/damu/collection" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.QueueDemo">
+  <component name="RunManager" selected="Application.PriorityQueueDemo">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -104,6 +103,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PriorityQueueDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.damu.collection.PriorityQueueDemo" />
+      <module name="Coding_Practice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.damu.collection.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="QueueDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.damu.collection.QueueDemo" />
       <module name="Coding_Practice" />
@@ -130,26 +142,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SortedMapDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.damu.collection.SortedMapDemo" />
-      <module name="Coding_Practice" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.damu.collection.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PriorityQueueDemo" />
         <item itemvalue="Application.QueueDemo" />
         <item itemvalue="Application.CopyOnWriteArraySetDemo" />
         <item itemvalue="Application.SetOverview" />
         <item itemvalue="Application.ImmutableMapDemo" />
-        <item itemvalue="Application.SortedMapDemo" />
       </list>
     </recent_temporary>
   </component>
