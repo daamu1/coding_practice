@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="896c00de-8e72-4241-aa98-aedad9168605" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/damu/collection/PriorityQueueDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/damu/collection/PriorityQueueDemo.java" afterDir="false" />
-    </list>
+    <list default="true" id="896c00de-8e72-4241-aa98-aedad9168605" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +43,7 @@
       <recent name="$PROJECT_DIR$/src/com/damu/collection" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PriorityQueueDemo">
+  <component name="RunManager" selected="Application.DequeDemo">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -90,8 +87,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ImmutableMapDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.damu.collection.ImmutableMapDemo" />
+    <configuration name="DequeDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.damu.collection.DequeDemo" />
       <module name="Coding_Practice" />
       <extension name="coverage">
         <pattern>
@@ -144,11 +141,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DequeDemo" />
         <item itemvalue="Application.PriorityQueueDemo" />
         <item itemvalue="Application.QueueDemo" />
         <item itemvalue="Application.CopyOnWriteArraySetDemo" />
         <item itemvalue="Application.SetOverview" />
-        <item itemvalue="Application.ImmutableMapDemo" />
       </list>
     </recent_temporary>
   </component>
