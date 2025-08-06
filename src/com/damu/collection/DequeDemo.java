@@ -3,74 +3,80 @@ package com.damu.collection;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.LinkedList;
+import java.util.NoSuchElementException;
 
 public class DequeDemo {
     public static void main(String[] args) {
-        //  double-ended queue
-        //  allows insertion and removal of elements from both ends
-        //  versatile than regular queues and stacks because they support all the operations of both
-
-          /*
-           INSERTION METHODS
-
-           addFirst(E e): Inserts the specified element at the front.
-           addLast(E e): Inserts the specified element at the end.
-           offerFirst(E e): Inserts the specified element at the front if possible.
-           offerLast(E e): Inserts the specified element at the end if possible.
-
-           */
-
-
-            /*
-
-           REMOVAL METHODS
-
-            removeFirst(): Retrieves and removes the first element.
-            removeLast(): Retrieves and removes the last element.
-            pollFirst(): Retrieves and removes the first element, or returns null if empty.
-            pollLast(): Retrieves and removes the last element, or returns null if empty.
-
-           */
-
         /*
+         ✅ Deque = Double Ended Queue
+         ✅ Supports insertion/removal from both front and rear
+         ✅ Implements both stack and queue functionality
+         ✅ Implementations: ArrayDeque (faster), LinkedList (flexible)
+         ✅ Null elements not allowed in ArrayDeque (throws NullPointerException)
+         */
 
-           EXAMINATION METHODS
+        // -----------------------------
+        // Using ArrayDeque
+        // -----------------------------
+        Deque<Integer> deque1 = new ArrayDeque<>();
 
-            getFirst(): Retrieves, but does not remove, the first element.
-            getLast(): Retrieves, but does not remove, the last element.
-            peekFirst(): Retrieves, but does not remove, the first element, or returns null if empty.
-            peekLast(): Retrieves, but does not remove, the last element, or returns null if empty.
-
-           */
-
-        /*
-
-           STACK METHODS
-
-            push(E e): Adds an element at the front (equivalent to addFirst(E e)).
-            pop(): Removes and returns the first element (equivalent to removeFirst())..
-
-           */
-
-        Deque<Integer> deque1 = new ArrayDeque<>(); // faster iteration, low memory, no null allowed
-        // circular, head and tail
-        // no need to shift elements, just shift head and tail
-        deque1.addFirst(10); // head--
+        // ========== INSERTION METHODS ==========
+        deque1.addFirst(10);    // throws exception if capacity limit reached
         deque1.addLast(20);
-        deque1.offerFirst(5);
+        deque1.offerFirst(5);   // returns false if failed
         deque1.offerLast(25);
-        // 5, 10, 20, 25
-        System.out.println(deque1);
-        System.out.println("First Element: " + deque1.getFirst()); // Outputs 5
-        System.out.println("Last Element: " + deque1.getLast());   // Outputs 25
-        deque1.removeFirst(); // Removes 5
-        deque1.pollLast();    // Removes 25
-        // Current Deque: [10, 20]
-        for (int num : deque1) {
-            System.out.println(num);
+        // Current: [5, 10, 20, 25]
+        System.out.println("After insertion: " + deque1);
+
+        // ========== EXAMINATION METHODS ==========
+        System.out.println("getFirst(): " + deque1.getFirst());    // throws if empty
+        System.out.println("getLast(): " + deque1.getLast());
+        System.out.println("peekFirst(): " + deque1.peekFirst());  // returns null if empty
+        System.out.println("peekLast(): " + deque1.peekLast());
+
+        // ========== REMOVAL METHODS ==========
+        deque1.removeFirst();   // removes 5
+        deque1.removeLast();    // removes 25
+        System.out.println("After removeFirst & removeLast: " + deque1); // [10, 20]
+
+        deque1.offerFirst(100);
+        deque1.offerLast(200);
+        System.out.println("With offerFirst/Last: " + deque1); // [100, 10, 20, 200]
+
+        System.out.println("pollFirst(): " + deque1.pollFirst());  // removes 100
+        System.out.println("pollLast(): " + deque1.pollLast());    // removes 200
+
+        // ========== STACK METHODS ==========
+        deque1.push(99);  // same as addFirst
+        System.out.println("After push(99): " + deque1);
+        System.out.println("pop(): " + deque1.pop()); // removes 99 (same as removeFirst)
+
+        // ========== ITERATION ==========
+        System.out.println("Final Deque contents:");
+        for (int val : deque1) {
+            System.out.println(val);
         }
-        Deque<Integer> deque2 = new LinkedList<>(); // insertion, deletion somewhere in middle
 
+        // ========== EDGE CASES ==========
+        deque1.clear();
+        System.out.println("\nAfter clearing deque1:");
+        System.out.println("peekFirst(): " + deque1.peekFirst());  // null
+        System.out.println("pollLast(): " + deque1.pollLast());    // null
 
+        try {
+            deque1.getFirst(); // throws NoSuchElementException
+        } catch (NoSuchElementException e) {
+            System.out.println("getFirst() failed on empty deque: " + e);
+        }
+
+        // -----------------------------
+        // Using LinkedList as Deque
+        // -----------------------------
+        Deque<String> deque2 = new LinkedList<>();
+        deque2.add("One");
+        deque2.addLast("Two");
+        deque2.addFirst("Zero");
+        deque2.push("Minus One");
+        System.out.println("\nLinkedList-backed Deque: " + deque2); // [Minus One, Zero, One, Two]
     }
 }
