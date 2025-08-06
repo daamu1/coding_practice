@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="896c00de-8e72-4241-aa98-aedad9168605" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/damu/pattern/UrlUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/damu/pattern/d.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/damu/collection/IteratorDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/damu/collection/IteratorDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/damu/collection/SortedMapDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/damu/collection/SortedMapDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/damu/collection/TaskSubmissionSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/damu/collection/TaskSubmissionSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/damu/collection/ConcurrentHashMapDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/damu/collection/ConcurrentHashMapDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +45,7 @@
       <recent name="$PROJECT_DIR$/src/com/damu/collection" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SortedMapDemo">
+  <component name="RunManager" selected="Application.ConcurrentHashMapDemo">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -93,12 +89,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FriendAndFoe" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.damu.kata.FriendAndFoe" />
+    <configuration name="ConcurrentHashMapDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.damu.collection.ConcurrentHashMapDemo" />
       <module name="Coding_Practice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.damu.kata.*" />
+          <option name="PATTERN" value="com.damu.collection.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -106,12 +102,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PangramChecker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.damu.kata.PangramChecker" />
+    <configuration name="HashtableDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.damu.collection.HashtableDemo" />
       <module name="Coding_Practice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.damu.kata.*" />
+          <option name="PATTERN" value="com.damu.collection.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -147,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ConcurrentHashMapDemo" />
+        <item itemvalue="Application.HashtableDemo" />
         <item itemvalue="Application.SortedMapDemo" />
         <item itemvalue="Application.d" />
         <item itemvalue="Application.Accumul" />
-        <item itemvalue="Application.FriendAndFoe" />
-        <item itemvalue="Application.PangramChecker" />
       </list>
     </recent_temporary>
   </component>

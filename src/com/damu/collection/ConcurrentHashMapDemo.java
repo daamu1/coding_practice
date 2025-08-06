@@ -1,24 +1,53 @@
 package com.damu.collection;
 
-
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class ConcurrentHashMapDemo {
     public static void main(String[] args) {
-        ConcurrentHashMap<String, Integer> map =  new ConcurrentHashMap<>();
-        // Java 7 --> segment based locking --> 16 segments --> smaller hashmaps
-        // Only the segment being written to or read from is locked
-        // read: do not require locking unless there is a write operation happening on the same segment
-        // write: lock
+        ConcurrentHashMap<String, Integer> map = new ConcurrentHashMap<>();
 
-        // java 8 --> no segmentation
-        //        --> Compare-And-Swap approach --> no locking except resizing or collision
-        // Thread A last saw --> x = 45
-        // Thread A work --> x to 50
-        // if x is still 45, then change it to 50 else don't change and retry
-        // put --> index
+        // Java 7: Segment-based locking (default 16 segments internally)
+        // Only one segment is locked during updates, improving concurrency.
 
-        // MAP --> SORTED --> THREAD SAFE --> ConcurrentSkipListMap
+        // Java 8+: Uses CAS (Compare-And-Swap) for better performance.
+        // No segments. Node-based locking only when resizing or collisions happen.
 
+        // Example:
+        // Thread A sees x = 45
+        // Thread A tries to update it to 50
+        // If x is still 45, update happens (atomic compare-and-set)
+        // Otherwise, retry or abort
+
+        // Let's simulate multiple threads updating the map
+
+        ExecutorService executor = Executors.newFixedThreadPool(3);
+
+        Runnable writer1 = () -> {
+            for (int i = 0; i < 5; i++) {
+                map.put("A", map.getOrDefault("A", 0) + 1);
+                System.out.println("Writer 1 updated A to: " + map.get("A"));
+            }
+        };
+
+        Runnable writer2 = () -> {
+            for (int i = 0; i < 5; i++) {
+                map.put("A", map.getOrDefault("A", 0) + 1);
+                System.out.println("Writer 2 updated A to: " + map.get("A"));
+            }
+        };
+
+        Runnable reader = () -> {
+            for (int i = 0; i < 5; i++) {
+                System.out.println("Reader reads A as: " + map.get("A"));
+            }
+        };
+
+        executor.execute(writer1);
+        executor.execute(writer2);
+        executor.execute(reader);
+
+        executor.shutdown();
     }
 }
