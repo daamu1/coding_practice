@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="896c00de-8e72-4241-aa98-aedad9168605" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/damu/collection/CustomHashMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/damu/ds/LinkedListInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/damu/kata/Accumul.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/damu/kata/FriendAndFoe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/damu/kata/PangramChecker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/damu/kata/v.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/damu/pattern/UrlUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/damu/pattern/d.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/damu/collection/ArrayListDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/damu/collection/ArrayListDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/damu/collection/IdentityHashMapDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/damu/collection/IdentityHashMapDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/damu/collection/WeakHashMapDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/damu/collection/WeakHashMapDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/damu/ds/ReverseOnlyAlphabets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/damu/ds/ReverseOnlyAlphabets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/damu/collection/IteratorDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/damu/collection/IteratorDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/damu/collection/SortedMapDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/damu/collection/SortedMapDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/damu/collection/TaskSubmissionSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/damu/collection/TaskSubmissionSystem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +49,7 @@
       <recent name="$PROJECT_DIR$/src/com/damu/collection" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Accumul">
+  <component name="RunManager" selected="Application.SortedMapDemo">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -98,38 +93,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ArrayListDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.damu.collection.ArrayListDemo" />
-      <module name="Coding_Practice" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.damu.collection.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FriendAndFoe" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.damu.kata.FriendAndFoe" />
       <module name="Coding_Practice" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.damu.kata.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LinkedListInterceptor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.damu.ds.LinkedListInterceptor" />
-      <module name="Coding_Practice" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.damu.ds.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -150,13 +119,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SortedMapDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.damu.collection.SortedMapDemo" />
+      <module name="Coding_Practice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.damu.collection.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="d" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.damu.pattern.d" />
+      <module name="Coding_Practice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.damu.pattern.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SortedMapDemo" />
+        <item itemvalue="Application.d" />
         <item itemvalue="Application.Accumul" />
         <item itemvalue="Application.FriendAndFoe" />
         <item itemvalue="Application.PangramChecker" />
-        <item itemvalue="Application.LinkedListInterceptor" />
-        <item itemvalue="Application.ArrayListDemo" />
       </list>
     </recent_temporary>
   </component>

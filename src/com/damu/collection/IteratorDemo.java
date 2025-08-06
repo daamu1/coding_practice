@@ -34,13 +34,8 @@ public class IteratorDemo {
 
         // ❌ This enhanced loop causes ConcurrentModificationException
         // ✅ Use iterator.remove() to safely remove while iterating
-        Iterator<Integer> itr = numbers.iterator();
-        while (itr.hasNext()) {
-            Integer number = itr.next();
-            if (number % 2 == 0) {
-                itr.remove(); // safe removal
-            }
-        }
+        // safe removal
+        numbers.removeIf(number -> number % 2 == 0);
 
         System.out.println("After removing even numbers: " + numbers); // Output: [1, 3, 5]
 

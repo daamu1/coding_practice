@@ -5,7 +5,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class TaskSubmissionSystem {
-    private static ConcurrentLinkedQueue<String> taskQueue = new ConcurrentLinkedQueue<>();
+    private static final ConcurrentLinkedQueue<String> taskQueue = new ConcurrentLinkedQueue<>();
     public static void main(String[] args) {
 
         Thread producer = new Thread(() -> {
